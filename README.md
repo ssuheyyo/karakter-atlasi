@@ -14,9 +14,11 @@ Ardından `http://localhost:8000` adresini açın.
 
 ## Ücretsiz GitHub Pages yayını
 
-1. GitHub'da herkese açık bir depo oluşturun ve bu klasördeki dosyaları `main` dalına gönderin.
-2. Deponun **Settings → Pages → Build and deployment → Source** alanında **Deploy from a branch** seçin. Branch olarak `main`, klasör olarak `/(root)` seçip kaydedin.
-3. Yayın tamamlandığında adres `https://KULLANICI.github.io/DEPO/` biçiminde olur. Alan adı satın almak gerekmez.
+Canlı adres: **https://ssuheyyo.github.io/karakter-atlasi/**
+
+Kaynak depo: **https://github.com/ssuheyyo/karakter-atlasi**
+
+Yayın, herkese açık deponun `main` dalındaki `/(root)` klasöründen GitHub Pages ile yapılır. Alan adı satın almak gerekmez.
 
 Site tüm varlıkları göreli yollarla çağırır, bu nedenle GitHub Pages alt yolunda da çalışır.
 
@@ -26,7 +28,7 @@ GitHub Pages sadece statik dosya barındırır; Google girişi için ayrıca üc
 
 1. [Firebase Console](https://console.firebase.google.com/) üzerinden proje ve Web App oluşturun.
 2. **Authentication → Sign-in method** bölümünde **Google** sağlayıcısını etkinleştirin.
-3. **Authentication → Settings → Authorized domains** bölümüne `KULLANICI.github.io` alan adını ekleyin. Yerel test yapacaksanız `localhost` alan adını da ekleyin.
+3. **Authentication → Settings → Authorized domains** bölümüne `ssuheyyo.github.io` alan adını ekleyin. Yerel test yapacaksanız `localhost` alan adını da ekleyin.
 4. **Firestore Database** oluşturun. `firestore.rules` içeriğini **Rules** bölümüne yapıştırıp yayınlayın. Kural, kullanıcıya yalnızca kendi sonucunu okuma ve yazma hakkı verir.
 5. Web uygulaması ayarlarındaki `apiKey`, `authDomain`, `projectId`, `appId` değerlerini `firebase-config.js` içine ekleyip gönderin. Bunlar istemci yapılandırma değerleridir, gizli yönetici anahtarı değildir. **Service account / admin özel anahtarını asla depoya koymayın.**
 6. Sitenin yayınlandığı adreste Google girişi ve sonuç senkronizasyonunu deneyin. Popup engellendiyse tarayıcıda bu site için popup izni verin.
